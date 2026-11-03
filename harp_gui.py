@@ -14,9 +14,10 @@
 布局:
     ┌────────┬──────────────────────────────────┬──────────────┐
     │ 导航栏 │  本机谱子库 / 在线曲库 / 演奏台   │  在线曲库     │
-    │  208px │  / 运行日志   四个页面            │  + 运行日志   │
-    │        │  ─────────────────────────────   │  336px       │
-    │        │  演奏条（速度 / 倒计时 / 开始演奏）│              │
+    │  184px │  / 运行日志   四个页面            │  + 运行日志   │
+    │        │                                  │  304px       │
+    │        ├──────────────────────────────────┴──────────────┤
+    │        │  全宽演奏条（速度 / 倒计时 / 开始演奏）          │
     └────────┴──────────────────────────────────┴──────────────┘
 
 界面层（配色、字体、控件工厂、列表控件）来自样板稿；
@@ -208,7 +209,7 @@ THEMES: dict[str, dict] = {
         "canvas": "#ECEAE5", "bg": "#FFFFFF", "panel": "#FFFFFF",
         "panel2": "#FAFAF8", "panel3": "#F2F1EE",
         "line": "#E3E1DC", "line2": "#0D0D0D",
-        "ink": "#0D0D0D", "ink2": "#4A4A4A", "ink3": "#8F8F8F",
+        "ink": "#0D0D0D", "ink2": "#4A4A4A", "ink3": "#686866",
         "accent": "#0D0D0D", "accent_ink": "#FFFFFF",
         "ok": "#1A1A1A", "danger": "#0D0D0D",
         "sans": ["Microsoft YaHei UI", "Microsoft YaHei", "SimHei"],
@@ -220,7 +221,7 @@ THEMES: dict[str, dict] = {
         "canvas": "#E3D9C6", "bg": "#FBF7EE", "panel": "#FDFAF3",
         "panel2": "#F4ECDD", "panel3": "#EFE6D5",
         "line": "#DED2BA", "line2": "#C3B295",
-        "ink": "#221F19", "ink2": "#4D463A", "ink3": "#8D8471",
+        "ink": "#221F19", "ink2": "#4D463A", "ink3": "#756A55",
         "accent": "#A8342A", "accent_ink": "#FFFAF2",
         "ok": "#3F5D43", "danger": "#A8342A",
         "sans": ["Microsoft YaHei UI", "Microsoft YaHei"],
@@ -229,11 +230,11 @@ THEMES: dict[str, dict] = {
     },
     "neon": {
         "label": "深色霓虹",
-        "canvas": "#05050A", "bg": "#0C0C15", "panel": "#13131F",
-        "panel2": "#1A1A29", "panel3": "#202033",
-        "line": "#272738", "line2": "#3B3B55",
-        "ink": "#ECEFFF", "ink2": "#A4ABC9", "ink3": "#6D7492",
-        "accent": "#E9FF4D", "accent_ink": "#111119",
+        "canvas": "#10131B", "bg": "#151A24", "panel": "#171D28",
+        "panel2": "#1D2532", "panel3": "#293446",
+        "line": "#2A3444", "line2": "#46546A",
+        "ink": "#EFF3FB", "ink2": "#BDC9DC", "ink3": "#98A8BF",
+        "accent": "#DDF77C", "accent_ink": "#192018",
         "ok": "#5CF2A8", "danger": "#FF5470",
         "sans": ["Microsoft YaHei UI", "Microsoft YaHei"],
         "mono": ["Consolas", "Courier New"],
@@ -245,8 +246,8 @@ THEMES: dict[str, dict] = {
         "canvas": "#0A0A1E", "bg": "#141034", "panel": "#1B1740",
         "panel2": "#221D4F", "panel3": "#2A2460",
         "line": "#332C6B", "line2": "#4A418E",
-        "ink": "#F3F4FF", "ink2": "#B8BCE0", "ink3": "#8A8FB8",
-        "accent": "#8B5CF6", "accent_ink": "#0A0A1A",
+        "ink": "#F3F4FF", "ink2": "#C6C9E7", "ink3": "#ADB2D4",
+        "accent": "#8B5CF6", "accent_ink": "#FFFFFF",
         "ok": "#4ADE80", "danger": "#FB7185",
         "sans": ["Microsoft YaHei UI", "Microsoft YaHei"],
         "mono": ["Consolas", "Courier New"],
@@ -254,12 +255,12 @@ THEMES: dict[str, dict] = {
     },
     "light": {
         "label": "明亮专业",
-        "canvas": "#EAEEF5", "bg": "#FFFFFF", "panel": "#FFFFFF",
-        "panel2": "#F6F8FC", "panel3": "#EEF2F9",
-        "line": "#E5EAF2", "line2": "#CFD8E6",
-        "ink": "#0F172A", "ink2": "#475569", "ink3": "#94A3B8",
-        "accent": "#2563EB", "accent_ink": "#FFFFFF",
-        "ok": "#059669", "danger": "#E11D48",
+        "canvas": "#F0F3F8", "bg": "#FFFFFF", "panel": "#FFFFFF",
+        "panel2": "#F6F8FB", "panel3": "#E9F0FD",
+        "line": "#DEE5EF", "line2": "#B8C5D7",
+        "ink": "#182338", "ink2": "#43546D", "ink3": "#62728B",
+        "accent": "#315FE8", "accent_ink": "#FFFFFF",
+        "ok": "#087F5B", "danger": "#C83551",
         "sans": ["Microsoft YaHei UI", "Microsoft YaHei"],
         "mono": ["Consolas", "Courier New"],
         "display": ["Microsoft YaHei UI", "Microsoft YaHei"],
@@ -269,7 +270,7 @@ THEMES: dict[str, dict] = {
         "canvas": "#04070A", "bg": "#070C08", "panel": "#0A110C",
         "panel2": "#0D1710", "panel3": "#101C13",
         "line": "#1A3221", "line2": "#2A5334",
-        "ink": "#BCFFD2", "ink2": "#79DD9D", "ink3": "#468A5F",
+        "ink": "#BCFFD2", "ink2": "#79DD9D", "ink3": "#70B58A",
         "accent": "#33FF88", "accent_ink": "#04120A",
         "ok": "#33FF88", "danger": "#FF6B6B",
         "sans": ["Consolas", "Courier New"],
@@ -278,7 +279,7 @@ THEMES: dict[str, dict] = {
     },
 }
 
-GAP = 13  # 面板之间的间距
+GAP = 16  # 面板之间的间距
 
 
 ICON_DIR = Path(__file__).resolve().parent / "icons"
@@ -293,12 +294,7 @@ ICON_FALLBACK = {    # 万一 icons/ 目录不在，退回单色文字，程序�
 
 class Icons:
     """
-    彩色卡通图标。
-
-    为什么非得用图片：tkinter 走 GDI 绘制文字，拿不到 Segoe UI Emoji 的彩色
-    图层，直接把 emoji 当文字画出来只会得到单色轮廓。所以这里改用浏览器把
-    彩色 emoji 预渲染成 28×28 的透明 PNG（生成脚本见 mockups/icons.html），
-    运行时用 PhotoImage 加载即可，零第三方依赖。
+    复用原有内嵌 PNG 图标；保留 icons/ 目录和文字回退。
     """
 
     def __init__(self, folder: Path = ICON_DIR):
@@ -396,21 +392,21 @@ class UI:
         c = self.c
         outer = tk.Frame(parent, bg=c["panel"], highlightthickness=1,
                          highlightbackground=c["line"], highlightcolor=c["line"])
-        head = tk.Frame(outer, bg=c["panel2"], height=34)
+        head = tk.Frame(outer, bg=c["panel"], height=44)
         head.pack(fill="x")
         head.pack_propagate(False)
         img = self.icons.img(icon) if icon else None
         if img is not None:
-            tk.Label(head, image=img, bg=c["panel2"], bd=0).pack(side="left", padx=(10, 0))
-            tk.Label(head, text=title, bg=c["panel2"], fg=c["ink"],
+            tk.Label(head, image=img, bg=c["panel"], bd=0).pack(side="left", padx=(14, 0))
+            tk.Label(head, text=title, bg=c["panel"], fg=c["ink"],
                      font=self.f.h2()).pack(side="left", padx=(6, 0))
         else:
             text = f"{self.icons.text(icon)}  {title}" if icon else title
-            tk.Label(head, text=text, bg=c["panel2"], fg=c["ink"],
+            tk.Label(head, text=text, bg=c["panel"], fg=c["ink"],
                      font=self.f.h2()).pack(side="left", padx=(12, 0))
         if right:
-            tk.Label(head, text=right, bg=c["panel2"], fg=c["ink3"],
-                     font=self.f.code()).pack(side="right", padx=(0, 12))
+            tk.Label(head, text=right, bg=c["panel"], fg=c["ink3"],
+                     font=self.f.small()).pack(side="right", padx=(0, 14))
         tk.Frame(outer, bg=c["line"], height=1).pack(fill="x")
         body = tk.Frame(outer, bg=c["panel"])
         body.pack(fill="both", expand=True)
@@ -429,8 +425,8 @@ class UI:
         kwargs = dict(text=text, command=command, font=self.f.body(10),
                       bg=bg, fg=fg, activebackground=abg, activeforeground=afg,
                       relief="flat", bd=0, highlightthickness=1,
-                      highlightbackground=border, highlightcolor=border,
-                      padx=12, pady=4, cursor="hand2")
+                      highlightbackground=border, highlightcolor=c['accent'],
+                      padx=12, pady=7, cursor="hand2", takefocus=True)
         img = self.icons.img(icon) if icon else None
         if img is not None:
             kwargs["image"] = img
@@ -467,7 +463,7 @@ class UI:
     # ---- 只读路径框 ----
     def path_box(self, parent: tk.Misc, path: str) -> tk.Label:
         c = self.c
-        return tk.Label(parent, text=path, anchor="w", bg=c["panel2"], fg=c["ink2"],
+        return tk.Label(parent, text=path, anchor="w", width=1, bg=c["panel2"], fg=c["ink2"],
                         font=self.f.code(), padx=9, pady=5,
                         highlightthickness=1, highlightbackground=c["line"])
 
@@ -517,13 +513,14 @@ class SongList(tk.Frame):
         self.row_frames: list[tk.Frame] = []
 
         if show_header:
-            head = tk.Frame(self, bg=c["panel2"], height=28)
+            head = tk.Frame(self, bg=c["panel2"], height=32)
             head.pack(fill="x")
             head.pack_propagate(False)
             self._grid_columns(head)
+            head.rowconfigure(0, weight=1)
             for i, (title, width, align) in enumerate(columns):
                 tk.Label(head, text=title, bg=c["panel2"], fg=c["ink3"],
-                         font=ui.f.code(), anchor=align).grid(
+                         font=ui.f.small(), anchor=align).grid(
                     row=0, column=i, sticky="ew", padx=(12, 6) if i == 0 else (0, 12))
                 if width:
                     head.columnconfigure(i, minsize=width)
@@ -581,7 +578,9 @@ class SongList(tk.Frame):
         rf = tk.Frame(holder, bg=bg, height=self.row_height)
         rf.pack(fill="x")
         rf.pack_propagate(False)
+        rf.grid_propagate(False)
         self._grid_columns(rf)
+        rf.rowconfigure(0, weight=1)
 
         widgets: list[tk.Misc] = [rf]
 
@@ -589,10 +588,10 @@ class SongList(tk.Frame):
             # 窄栏：谱名一行，信息一行
             top = tk.Label(rf, text=primary, bg=bg, fg=c["ink"], font=self.ui.f.body(10),
                            anchor="w")
-            top.place(x=11, y=5, relwidth=1, width=-22)
-            sub = tk.Label(rf, text=secondary, bg=bg, fg=c["ink3"], font=self.ui.f.code(8),
+            top.place(x=12, y=6, relwidth=1, width=-24)
+            sub = tk.Label(rf, text=secondary, bg=bg, fg=c["ink3"], font=self.ui.f.small(9),
                            anchor="w")
-            sub.place(x=11, y=23, relwidth=1, width=-22)
+            sub.place(x=12, y=29, relwidth=1, width=-24)
             widgets += [top, sub]
         else:
             main = tk.Label(rf, text=primary, bg=bg, fg=c["ink"], font=self.ui.f.body(10),
@@ -606,7 +605,7 @@ class SongList(tk.Frame):
                 widgets.append(sub)
             for i, value in enumerate(tail or []):
                 col = i + 1
-                tk.Label(rf, text=value, bg=bg, fg=c["ink3"], font=self.ui.f.code(),
+                tk.Label(rf, text=value, bg=bg, fg=c["ink2"], font=self.ui.f.code(),
                          anchor="e").grid(row=0, column=col, sticky="ew", padx=(0, 12))
 
         tk.Frame(holder, bg=c["line"], height=1).pack(fill="x")
@@ -731,13 +730,18 @@ class App:
         self.body = tk.Frame(self.root, bg=c["canvas"])
         self.body.pack(fill="both", expand=True)
         self._build_rail(self.body)
-        inspector = tk.Frame(self.body, bg=c["canvas"], width=336)
-        inspector.pack(side="right", fill="y", padx=(GAP, 16), pady=(0, 16))
+        workspace = tk.Frame(self.body, bg=c["canvas"])
+        workspace.pack(side="left", fill="both", expand=True, padx=GAP, pady=16)
+        content = tk.Frame(workspace, bg=c["canvas"])
+        content.pack(side="top", fill="both", expand=True)
+        inspector = tk.Frame(content, bg=c["canvas"], width=304)
+        inspector.pack(side="right", fill="y", padx=(GAP, 0))
         inspector.pack_propagate(False)
         self._build_inspector(inspector)
-        main = tk.Frame(self.body, bg=c["canvas"])
-        main.pack(side="left", fill="both", expand=True, padx=(GAP, 0), pady=(0, 16))
+        main = tk.Frame(content, bg=c["canvas"])
+        main.pack(side="left", fill="both", expand=True)
         self._build_main(main)
+        self._build_playbar(workspace)
         self._paint_nav()
         # 换肤是整棵树重建，重建后要把已有数据回填（否则列表会空掉）
         if self.library:
@@ -749,20 +753,18 @@ class App:
     # ---- 左侧导航栏 ----
     def _build_rail(self, parent):
         c, f = self.ui.c, self.ui.f
-        rail = tk.Frame(parent, bg=c["panel2"], width=208)
-        rail.pack(side="left", fill="y", padx=(16, 0), pady=(0, 16))
+        rail = tk.Frame(parent, bg=c["panel2"], width=184)
+        rail.pack(side="left", fill="y")
         rail.pack_propagate(False)
 
         brand = tk.Frame(rail, bg=c["panel2"])
-        brand.pack(fill="x", padx=12, pady=(14, 10))
-        tk.Label(brand, text="♫", bg=c["panel2"], fg=c["accent"],
-                 font=(f.ui, 16)).pack(side="left", padx=(0, 8))
+        brand.pack(fill="x", padx=16, pady=(20, 16))
         box = tk.Frame(brand, bg=c["panel2"])
         box.pack(side="left")
-        tk.Label(box, text=BRAND, bg=c["panel2"], fg=c["ink"],
-                 font=f.h1(12)).pack(anchor="w")
-        tk.Label(box, text=APP_VER + (" · 打包版" if FROZEN else ""), bg=c["panel2"],
-                 fg=c["ink3"], font=f.code(8)).pack(anchor="w")
+        tk.Label(box, text="口琴工具台", bg=c["panel2"], fg=c["accent"],
+                 font=f.h1(16)).pack(anchor="w", pady=(0, 6))
+        tk.Label(box, text=BRAND + ' · ' + APP_VER + (" · 打包版" if FROZEN else ""),
+                 bg=c["panel2"], fg=c["ink3"], font=f.small(8)).pack(anchor="w")
 
         tk.Frame(rail, bg=c["line"], height=1).pack(fill="x")
         self._section(rail, "工作区")
@@ -792,11 +794,11 @@ class App:
         for w in (admin_row, self.admin_lbl):
             w.bind("<Button-1>", lambda _e: self.restart_as_admin())
         self._paint_admin()
-        self.ui.button(bottom, "换肤", "ghost", self.cycle_theme,
-                       icon="paint").pack(fill="x", pady=(8, 0))
-        self.ui.button(bottom, "检查更新", "ghost", self.check_update,
-                       icon="download").pack(fill="x", pady=(6, 0))
-        self.ui.button(bottom, "退出程序", "danger", self.on_close).pack(fill="x", pady=(6, 0))
+        options = tk.Frame(bottom, bg=c['panel2'])
+        options.pack(fill='x', pady=(8, 0))
+        self.ui.button(options, "换肤", "ghost", self.cycle_theme).pack(side='left')
+        self.ui.button(options, "检查更新", "ghost", self.check_update).pack(side='right')
+        self.ui.button(bottom, "退出程序", "ghost", self.on_close).pack(fill="x", pady=(6, 0))
         tk.Label(bottom, text="当前：" + c["label"], bg=c["panel2"], fg=c["ink3"],
                  font=f.code(8), anchor="w").pack(fill="x", pady=(6, 0))
 
@@ -811,7 +813,7 @@ class App:
     def _section(self, parent, text):
         c, f = self.ui.c, self.ui.f
         tk.Label(parent, text=text, bg=c["panel2"], fg=c["ink3"], font=f.code(8),
-                 anchor="w").pack(fill="x", padx=16, pady=(12, 4))
+                 anchor="w").pack(fill="x", padx=16, pady=(18, 8))
 
     def _icon_slot(self, parent, name, bg, fg):
         slot = tk.Frame(parent, bg=bg, width=ICON_W)
@@ -828,9 +830,11 @@ class App:
 
     def _nav_item(self, parent, key, icon, text, badge):
         c, f = self.ui.c, self.ui.f
-        row = tk.Frame(parent, bg=c["panel2"], height=34)
-        row.pack(fill="x", padx=10)
+        row = tk.Frame(parent, bg=c["panel2"], height=38)
+        row.pack(fill="x", padx=10, pady=2)
         row.pack_propagate(False)
+        indicator = tk.Frame(row, bg=c['panel2'], width=3)
+        indicator.pack(side='left', fill='y')
         slot, icn = self._icon_slot(row, icon, c["panel2"], c["ink3"])
         slot.pack_configure(padx=(8, 0))
         lbl = tk.Label(row, text=text, bg=c["panel2"], fg=c["ink2"], font=f.body(10),
@@ -843,7 +847,8 @@ class App:
             w.bind("<Enter>", lambda _e, k=key: self._nav_hover(k, True))
             w.bind("<Leave>", lambda _e, k=key: self._nav_hover(k, False))
             w.configure(cursor="hand2")
-        return {"row": row, "lbl": lbl, "bdg": bdg, "slot": slot, "icn": icn}
+        return {"row": row, "lbl": lbl, "bdg": bdg, "slot": slot, "icn": icn,
+                "indicator": indicator}
 
     def _nav_hover(self, key, entering: bool):
         if key == self.current_page:
@@ -856,8 +861,9 @@ class App:
         c = self.ui.c
         for key, w in self.nav_widgets.items():
             active = key == self.current_page
-            bg = c["accent"] if active else c["panel2"]
-            fg = c["accent_ink"] if active else c["ink2"]
+            bg = c["panel3"] if active else c["panel2"]
+            fg = c["ink"] if active else c["ink2"]
+            w['indicator'].configure(bg=c['accent'] if active else c['panel2'])
             w["row"].configure(bg=bg)
             w["slot"].configure(bg=bg)
             w["icn"].configure(bg=bg, fg=fg)
@@ -876,7 +882,7 @@ class App:
     def _tool_item(self, parent, key, icon, text):
         c, f = self.ui.c, self.ui.f
         row = tk.Frame(parent, bg=c["panel2"], height=32)
-        row.pack(fill="x", padx=10)
+        row.pack(fill="x", padx=10, pady=1)
         row.pack_propagate(False)
         slot, icn = self._icon_slot(row, icon, c["panel2"], c["ink3"])
         slot.pack_configure(padx=(8, 0))
@@ -900,33 +906,33 @@ class App:
             "play": self._page_play(host),
             "log": self._page_log(host),
         }
-        self._build_playbar(parent)
         self.goto("local")
 
     def _page_local(self, parent):
         c, f = self.ui.c, self.ui.f
         page = tk.Frame(parent, bg=c["canvas"])
-        bar = tk.Frame(page, bg=c["canvas"], height=46)
-        bar.pack(fill="x", pady=(13, 0))
+        bar = tk.Frame(page, bg=c["canvas"], height=40)
+        bar.pack(fill="x")
         bar.pack_propagate(False)
         tk.Label(bar, text="本机谱子库", bg=c["canvas"], fg=c["ink"],
                  font=f.h1(15)).pack(side="left")
         self.local_count = tk.Label(bar, text="共 0 份", bg=c["canvas"], fg=c["ink3"],
                                     font=f.code())
         self.local_count.pack(side="left", padx=(10, 0))
-        self.ui.path_box(bar, self.score_dir).pack(side="left", fill="x", expand=True,
-                                                   padx=(12, 8))
-        self.ui.button(bar, "换目录", "default", self.change_dir,
+        actions = tk.Frame(bar, bg=c['canvas'])
+        actions.pack(side='right')
+        self.ui.button(actions, "换目录", "default", self.change_dir,
                        icon="folder_open").pack(side="left")
-        self.ui.button(bar, "⟳", "default", self.rescan).pack(side="left", padx=(6, 0))
-        self.ui.button(bar, "▸", "default", self.open_dir).pack(side="left", padx=(6, 0))
+        self.ui.button(actions, "刷新", "default", self.rescan).pack(side="left", padx=(6, 0))
+        self.ui.button(actions, "打开", "default", self.open_dir).pack(side="left", padx=(6, 0))
+        self.ui.path_box(page, self.score_dir).pack(fill="x", pady=(10, 0))
 
         outer, _head, body = self.ui.panel(page, "谱面列表", "点击选择 · 双击演奏",
                                            icon="page")
         outer.pack(fill="both", expand=True, pady=(GAP, 0))
         self.local_list = SongList(body, self.ui,
-                                   [("谱名", None, "w"), ("音符", 90, "e"), ("BPM", 90, "e")],
-                                   [], on_select=self.pick_local, row_height=30)
+                                   [("谱名", None, "w"), ("音符", 64, "e"), ("BPM", 64, "e")],
+                                   [], on_select=self.pick_local, row_height=38)
         self.local_list.pack(fill="both", expand=True)
         self.local_list.bind("<Double-Button-1>", lambda _e: self.start_play())
         return page
@@ -934,27 +940,29 @@ class App:
     def _page_online(self, parent):
         c, f = self.ui.c, self.ui.f
         page = tk.Frame(parent, bg=c["canvas"])
-        bar = tk.Frame(page, bg=c["canvas"], height=46)
-        bar.pack(fill="x", pady=(13, 0))
+        bar = tk.Frame(page, bg=c["canvas"], height=40)
+        bar.pack(fill="x")
         bar.pack_propagate(False)
         tk.Label(bar, text="在线曲库", bg=c["canvas"], fg=c["ink"],
                  font=f.h1(15)).pack(side="left")
         self.online_count = tk.Label(bar, text="—", bg=c["canvas"], fg=c["ink3"],
                                      font=f.code())
         self.online_count.pack(side="left", padx=(10, 0))
-        self.entry_online = self.ui.entry(bar, "输入曲名 / 关键词，搜索在线谱面…")
+        search = tk.Frame(page, bg=c['canvas'])
+        search.pack(fill='x', pady=(10, 0))
+        self.entry_online = self.ui.entry(search, "输入曲名 / 关键词，搜索在线谱面…")
         self.entry_online.pack(side="left", fill="x", expand=True, padx=(12, 8), ipady=5)
         self.entry_online.bind("<Return>", lambda _e: self.do_search())
-        self.ui.button(bar, "搜索", "key", self.do_search).pack(side="left")
-        self.ui.button(bar, "⟳", "default", self.refresh_online).pack(side="left", padx=(6, 0))
+        self.ui.button(search, "搜索", "key", self.do_search).pack(side="left")
+        self.ui.button(search, "刷新", "default", self.refresh_online).pack(side="left", padx=(6, 0))
 
         outer, _head, body = self.ui.panel(page, "曲目列表", "成品站公开谱库 · 双击下载",
                                            icon="globe")
         outer.pack(fill="both", expand=True, pady=(GAP, 0))
         self.online_list = SongList(body, self.ui,
-                                    [("曲名", None, "w"), ("投稿", 140, "e"),
-                                     ("BPM", 70, "e"), ("音符", 80, "e")],
-                                    [], on_select=self.pick_online, row_height=28)
+                                    [("曲名", None, "w"), ("投稿", 92, "e"),
+                                     ("BPM", 58, "e"), ("音符", 58, "e")],
+                                    [], on_select=self.pick_online, row_height=38)
         self.online_list.pack(fill="both", expand=True)
         self.online_list.bind("<Double-Button-1>", lambda _e: self.download())
         return page
@@ -963,15 +971,17 @@ class App:
         c, f = self.ui.c, self.ui.f
         page = tk.Frame(parent, bg=c["canvas"])
         outer, _head, body = self.ui.panel(page, "演奏台", "", icon="play")
-        outer.pack(fill="both", expand=True, pady=(GAP, 0))
+        outer.pack(fill="both", expand=True)
         inner = tk.Frame(body, bg=c["panel"])
-        inner.pack(anchor="nw", padx=26, pady=26)
+        inner.pack(fill='both', expand=True, padx=24, pady=24)
         self.play_name = tk.Label(inner, text="（还没选谱子）", bg=c["panel"], fg=c["ink"],
-                                  font=f.h1(24), anchor="w")
-        self.play_name.pack(anchor="w")
+                                  font=f.h1(22), anchor="w", width=1)
+        self.play_name.pack(anchor="w", fill='x')
+        self.play_name.bind('<Configure>', lambda e: e.widget.configure(wraplength=max(120, e.width)))
         self.play_sub = tk.Label(inner, text="去「本机谱子库」点一首，或从右边在线曲库下载",
-                                 bg=c["panel"], fg=c["ink3"], font=f.code(), anchor="w")
-        self.play_sub.pack(anchor="w", pady=(6, 22))
+                                 bg=c["panel"], fg=c["ink3"], font=f.small(), anchor="w", width=1)
+        self.play_sub.pack(anchor="w", fill='x', pady=(8, 22))
+        self.play_sub.bind('<Configure>', lambda e: e.widget.configure(wraplength=max(120, e.width)))
         row = tk.Frame(inner, bg=c["panel"])
         row.pack(anchor="w")
         b1 = self.ui.button(row, "开始演奏", "key", self.start_play, icon="play")
@@ -981,13 +991,15 @@ class App:
         b3 = self.ui.button(row, "急停", "danger", self.stop_play, icon="stop")
         b3.pack(side="left")
         self._busy_buttons += [b1, b2, b3]
-        tk.Label(inner, bg=c["panel"], fg=c["ink3"], font=f.small(), justify="left",
+        instructions = tk.Label(inner, bg=c["panel"], fg=c["ink2"], font=f.small(), justify="left",
                  anchor="w",
                  text="① 游戏与本工具都要以管理员运行（否则 UIPI 会静默丢弃按键）\n"
                       "② 输入法切英文；进游戏先打开口琴界面\n"
                       "③ 点「开始演奏」后立刻切到游戏窗口（脚本会等它到前台）\n"
-                      "④ 出事按 Esc 急停；鼠标键卡住按 Ctrl+Alt+U 或点侧栏「解卡」"
-                 ).pack(anchor="w", pady=(24, 0))
+                      "④ 出事按 Esc 急停；鼠标键卡住按 Ctrl+Alt+U 或点侧栏「解卡」",
+                 width=1)
+        instructions.pack(anchor="w", fill='x', pady=(24, 0))
+        instructions.bind('<Configure>', lambda e: e.widget.configure(wraplength=max(120, e.width)))
         return page
 
     def _page_log(self, parent):
@@ -1004,23 +1016,27 @@ class App:
         bar = tk.Frame(parent, bg=c["panel"], highlightthickness=1,
                        highlightbackground=c["line"])
         bar.pack(fill="x", pady=(GAP, 0))
-        right = tk.Frame(bar, bg=c["panel"])
-        right.pack(side="right", padx=14, pady=10)
-        left = tk.Frame(bar, bg=c["panel"])
-        left.pack(side="left", fill="x", expand=True, padx=14, pady=10)
-        self.bar_name = tk.Label(left, text="（还没选谱子）", bg=c["panel"], fg=c["ink"],
-                                 font=f.h1(13), anchor="w")
-        self.bar_name.pack(anchor="w", fill="x")
-        self.bar_sub = tk.Label(left, text="", bg=c["panel"], fg=c["ink3"], font=f.code(),
+        summary = tk.Frame(bar, bg=c['panel'])
+        summary.pack(fill='x', padx=16, pady=(12, 0))
+        self.bar_sub = tk.Label(summary, text="", bg=c["panel"], fg=c["ink3"], font=f.code(),
                                 anchor="w")
-        self.bar_sub.pack(anchor="w", fill="x", pady=(3, 2))
-        self.bar_hint = tk.Label(left, text="双击谱子可直接演奏；切到游戏窗口后自动开始。",
-                                 bg=c["panel"], fg=c["ink3"], font=f.small(), anchor="w")
-        self.bar_hint.pack(anchor="w", fill="x")
+        self.bar_sub.pack(side='right', padx=(16, 0))
+        self.bar_name = tk.Label(summary, text="（还没选谱子）", bg=c["panel"], fg=c["ink"],
+                                 font=f.h2(12), anchor="w", width=1)
+        self.bar_name.pack(side='left', fill='x', expand=True)
+        controls = tk.Frame(bar, bg=c['panel'])
+        controls.pack(fill='x', padx=16, pady=(10, 12))
+        right = tk.Frame(controls, bg=c['panel'])
+        right.pack(side='right')
+        self.bar_hint = tk.Label(controls, text="双击谱子可直接演奏；切到游戏窗口后自动开始。",
+                                 bg=c["panel"], fg=c["ink3"], font=f.small(), anchor="w",
+                                 justify='left', width=1)
+        self.bar_hint.pack(side='left', fill='x', expand=True, padx=(0, 16))
+        self.bar_hint.bind('<Configure>', lambda e: e.widget.configure(wraplength=max(100, e.width)))
         for label, var, unit in (("速度", self.speed, "×"), ("倒计时", self.countdown, "秒")):
             cell = tk.Frame(right, bg=c["panel"])
-            cell.pack(side="left", padx=(0, 12))
-            tk.Label(cell, text=label, bg=c["panel"], fg=c["ink3"], font=f.code(8),
+            cell.pack(side="left", padx=(0, 16))
+            tk.Label(cell, text=label, bg=c["panel"], fg=c["ink3"], font=f.small(),
                      anchor="w").pack(anchor="w")
             row = tk.Frame(cell, bg=c["panel"])
             row.pack(anchor="w", pady=(3, 0))
@@ -1030,12 +1046,12 @@ class App:
                      insertbackground=c["ink"]).pack(side="left", ipady=4)
             tk.Label(row, text=unit, bg=c["panel"], fg=c["ink3"],
                      font=f.code(8)).pack(side="left", padx=(4, 0))
-        self.b_dry = self.ui.button(right, "干跑", "default", self.dry_run, icon="run")
-        self.b_dry.pack(side="left", ipady=6)
+        self.b_dry = self.ui.button(right, "干跑测试", "default", self.dry_run, icon="run")
+        self.b_dry.pack(side="left")
         self.b_abort = self.ui.button(right, "急停", "danger", self.stop_play, icon="stop")
-        self.b_abort.pack(side="left", padx=6, ipady=6)
+        self.b_abort.pack(side="left", padx=8)
         self.b_play = self.ui.button(right, "开始演奏", "key", self.start_play, icon="play")
-        self.b_play.pack(side="left", ipady=6)
+        self.b_play.pack(side="left")
         self._busy_buttons += [self.b_dry, self.b_abort, self.b_play]
         self.b_stop = self.b_abort
 
@@ -1052,15 +1068,13 @@ class App:
         self.entry_side.bind("<Return>", lambda _e: self.do_search())
         self.ui.button(search, "搜索", "key", self.do_search).pack(side="left", padx=(6, 0))
         self.ui.button(search, "⟳", "default", self.refresh_online).pack(side="left", padx=(6, 0))
-        self.side_list = SongList(pad, self.ui, [("曲名", None, "w")], [],
-                                  on_select=self.pick_online, row_height=42,
-                                  show_header=False)
-        self.side_list.pack(fill="both", expand=True, pady=(11, 0))
-        self.b_dl = self.ui.button(pad, "下载到谱子库", "key", self.download, icon="download")
-        self.b_dl.pack(fill="x", pady=(11, 6))
+        actions = tk.Frame(pad, bg=c['panel'])
+        actions.pack(side='bottom', fill='x', pady=(8, 0))
+        self.b_dl = self.ui.button(actions, "下载到谱子库", "key", self.download, icon="download")
+        self.b_dl.pack(fill="x", pady=(0, 6))
         self._busy_buttons.append(self.b_dl)
-        self.ui.checkbox(pad, "同时存到收藏夹", self.keep_fav).pack(anchor="w")
-        dirrow = tk.Frame(pad, bg=c["panel"])
+        self.ui.checkbox(actions, "同时存到收藏夹", self.keep_fav).pack(anchor="w")
+        dirrow = tk.Frame(actions, bg=c["panel"])
         dirrow.pack(fill="x", pady=(8, 0))
         self.fav_dir = self.ui.path_box(
             dirrow, self.cfg.get('LIB_EXTRA_DIR')
@@ -1068,13 +1082,18 @@ class App:
         self.fav_dir.pack(side="left", fill="x", expand=True)
         self.ui.button(dirrow, "⋯", "default",
                        self.choose_download_dir).pack(side="left", padx=(6, 0))
-        self.lib_status = tk.Label(pad, text="● 正在读取曲库索引…", bg=c["panel"],
-                                   fg=c["ok"], font=self.ui.f.small(), anchor="w")
+        self.lib_status = tk.Label(actions, text="● 正在读取曲库索引…", bg=c["panel"],
+                                   fg=c["ok"], font=self.ui.f.small(), anchor="w",
+                                   wraplength=278, justify='left')
         self.lib_status.pack(anchor="w", pady=(9, 0))
+        self.side_list = SongList(pad, self.ui, [("曲名", None, "w")], [],
+                                  on_select=self.pick_online, row_height=52,
+                                  show_header=False)
+        self.side_list.pack(fill="both", expand=True, pady=(11, 0))
 
         outer2, head2, body2 = self.ui.panel(parent, "运行日志", icon="clipboard")
-        outer2.configure(height=196)
-        outer2.pack(fill="x", pady=(GAP, 0))
+        outer2.configure(height=160)
+        outer2.pack(side='bottom', fill="x", pady=(GAP, 0), before=outer)
         outer2.pack_propagate(False)
         self.ui.button(head2, "解卡", "ghost", self.unlock,
                        icon="unlock").pack(side="right", padx=(0, 8), pady=4)
